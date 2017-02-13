@@ -6,7 +6,7 @@ The tidy dataset can be loaded in R with the following script:
 
 fileUrl <- "https://s3.amazonaws.com/coursera-uploads/peer-review/9ecc142db9777f061e1a052256b76c6d/tidydata.txt"
 fileUrl <- sub("^https", "http", address)
-tidydata <- read.table(url(fileUrl), header = TRUE) 
+tidydata <- read.table(url(fileUrl), header = TRUE)
 View(tidydata)
 
 It can also be loaded from a local folder with: 
@@ -62,11 +62,10 @@ mag - ???
 Example of the description of one variable in the code book:
 
 tbodyaccmeanx	 3
-	Average of the time observations on the mean of body acceleration in the X 		
-	direction
+	Average of the time observations on the mean of body acceleration in the X direction
 		Continuous, normalized and bounded within [-1,1]
 		Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
- 		0.2216  0.2712  0.2770  0.2743  0.2800  0.3015
+		0.2216  0.2712  0.2770  0.2743  0.2800  0.3015
 
 Given that we provide a very detailed codebook we do not believe that the names of the variables should be made even more descriptive as this will sacrifice conciseness of the variable names. All conventions for variable name format are addressed in the resulting data set. With this we believe that Step 4 is completed.  The final data set after this step is completed is also named "datameanstd".
 
