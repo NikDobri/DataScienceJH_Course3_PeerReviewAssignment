@@ -5,8 +5,11 @@ The source data for this dataset was collected by Davide Anguita, Alessandro Ghi
 The tidy dataset can be loaded in R with the following script:
 
 fileUrl <- "https://s3.amazonaws.com/coursera-uploads/peer-review/9ecc142db9777f061e1a052256b76c6d/tidydata.txt"
+
 fileUrl <- sub("^https", "http", address)
+
 tidydata <- read.table(url(fileUrl), header = TRUE)
+
 View(tidydata)
 
 It can also be loaded from a local folder with: 
@@ -47,25 +50,25 @@ Please note the glossary and the example of one of the variables described in th
 
 GLOSSARY OF ABBREVIATIONS
 
-t - time
-f - frequency
-Acc - acceleration
-Gyro - gyroscope
-BodyAcc - body acceleration signal
-GravityAcc - gravity acceleration signal
-BodyGyro - body angular velocity signal
-BodyAccJerk - body acceleration jerk signal
-BodyGyroJerk - body angular velocity jerk signal
-XYZ - denoteS 3-axial signals in the X, Y and Z directions
-mag - ???
+* t - time
+* f - frequency
+* Acc - acceleration
+* Gyro - gyroscope
+* BodyAcc - body acceleration signal
+* GravityAcc - gravity acceleration signal
+* BodyGyro - body angular velocity signal
+* BodyAccJerk - body acceleration jerk signal
+* BodyGyroJerk - body angular velocity jerk signal
+* XYZ - denoteS 3-axial signals in the X, Y and Z directions
+* mag - ???
 
 Example of the description of one variable in the code book:
 
-tbodyaccmeanx	 3
-	Average of the time observations on the mean of body acceleration in the X direction
-		Continuous, normalized and bounded within [-1,1]
-		Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
-		0.2216  0.2712  0.2770  0.2743  0.2800  0.3015
+* tbodyaccmeanx	 3
+*	Average of the time observations on the mean of body acceleration in the X direction
+*		Continuous, normalized and bounded within [-1,1]
+*		Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
+*		0.2216  0.2712  0.2770  0.2743  0.2800  0.3015
 
 Given that we provide a very detailed codebook we do not believe that the names of the variables should be made even more descriptive as this will sacrifice conciseness of the variable names. All conventions for variable name format are addressed in the resulting data set. With this we believe that Step 4 is completed.  The final data set after this step is completed is also named "datameanstd".
 
