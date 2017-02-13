@@ -1,0 +1,739 @@
+                   DESCRIPTORS AND MEASUREMENTS OF HUMAH ACTIVITY
+			      USING SMARTPHONES DATASET
+
+				Based on the Study of
+
+		     HUMAN ACTIVITY RECOGNITION USING SMARTPHONES
+
+			            
+
+				    Documented at
+    
+     Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz.
+   A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European
+  Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning,
+                       ESANN 2013. Bruges, Belgium 24-26 April 2013.
+
+
+
+           
+                                                                                
+                                                                                
+                                                                                
+                                  Principal Investigator                        
+                                                                                
+     Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz.  
+
+					    at
+
+			   Universiti degli Studi di Genova            
+                                                                                
+                                             
+					
+                                           
+                                                                                
+       
+
+DATA COLLECTION DESCRIPTION                      
+ 
+The source data for this dataset was collected by Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz for the purposes of the Human Activity Recognition Using Smartphones study. This dataset takes a subset of the source dataset and then stores the average of each signal-variable mean and standard deviation (to be explained below) for each participant and activity combination. There are 30 participants and 6 activities undertaken by each participant, leading to 180 unique observations in the dataset. The number of averaged signal-variable features (the measurements) are 79. Two extra identification variables add to a total of 81 variables.   
+
+
+
+DATA COLLECTION DESCRIPTION OF THE SOURCE DATASET                                                                              
+                                                                            
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+
+A full description of the experiment is provided at:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The Human Activity Recognition Using Smartphones Dataset is located at
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+For each record it is provided:
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+The dataset includes the following files:
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+The following files are available for the train and test data. Their descriptions are equivalent. 
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+
+- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+
+- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+Notes: 
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
+
+The activities:
+LAYING 
+SITTING 
+STANDING 
+WALKING 
+WALKING_DOWNSTAIRS 
+WALKING_UPSTAIRS
+
+The features:
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+mad(): Median absolute deviation 
+max(): Largest value in array
+min(): Smallest value in array
+sma(): Signal magnitude area
+energy(): Energy measure. Sum of the squares divided by the number of values. 
+iqr(): Interquartile range 
+entropy(): Signal entropy
+arCoeff(): Autorregresion coefficients with Burg order equal to 4
+correlation(): correlation coefficient between two signals
+maxInds(): index of the frequency component with largest magnitude
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+skewness(): skewness of the frequency domain signal 
+kurtosis(): kurtosis of the frequency domain signal 
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+angle(): Angle between to vectors.
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+The complete list of variables of each feature vector is available in 'features.txt'
+
+For more information about this dataset contact: activityrecognition@smartlab.ws
+
+License:
+Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+
+Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+
+
+
+OPERATIONS APPLIED ON THE SOURCE DATA TO ARRIVE AT THE DOCUMENTED DATASET
+
+The source data contains separate datasets for train and test subject. The first operation is to merge the train and test data sets. Naturally part of this operation is to append to the measurements data the data for Subject ID and Activity ID. In a subsequent sub-step the Activity ID is replaced with Activity.Labels for readability.
+
+The next step selects only the variables that are either means or standard deviations of the signals. This results in 79 variables housing signal-variable measurements. 
+
+The resulting dataset is grouped by subject and activity, 180 groups, and the average of each signal-variable measurements is taken for each group. 
+
+
+
+GLOSSARY OF ABBREVIATIONS
+
+t - time
+f - frequency
+Acc - acceleration
+Gyro - gyroscope
+BodyAcc - body acceleration signal
+GravityAcc - gravity acceleration signal
+BodyGyro - body angular velocity signal
+BodyAccJerk - body acceleration jerk signal
+BodyGyroJerk - body angular velocity jerk signal
+XYZ - denoteS 3-axial signals in the X, Y and Z directions
+mag - ???
+
+CODEBOOK
+subject	1	
+	Code of individual tested	
+		1 to 30 for 30 tested subjects
+activity 2	
+	Label of activity performed	
+		LAYING 		SITTING 		STANDING 		WALKING 		WALKING_DOWNSTAIRS 		WALKING_UPSTAIRS
+
+tbodyaccmeanx	3
+	Average of the time observations on the mean of body acceleration in the X 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		0.2216  0.2712  0.2770  0.2743  0.2800  0.3015
+
+		tbodyaccmeany	4
+	Average of the time observations on the mean of body acceleration in the Y 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.       1st Qu.    Median      Mean   3rd Qu.      Max. 
+		-0.040510 -0.020020 -0.017260 -0.017870 -0.014940 -0.001308
+
+	tbodyaccmeanz	5
+	Average of the time observations on the mean of body acceleration in the Z 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.     1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.15250 -0.11210 -0.10820 -0.10920 -0.10440 -0.07538
+		
+tbodyaccstdx	6
+	Average of the time observations on the standard deviation of body acceleration in 	
+	the X direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9961 -0.9799 -0.7526 -0.5577 -0.1984  0.6269
+
+		tbodyaccstdy	7
+	Average of the time observations on the standard deviation of body acceleration in 	
+	the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.     1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.99020 -0.94210 -0.50900 -0.46050 -0.03077  0.61690
+		
+tbodyaccstdz	8
+	Average of the time observations on the standard deviation of body acceleration in 	
+	the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9877 -0.9501 -0.6518 -0.5756 -0.2306  0.6090 
+
+tgravityaccmeanx 9
+	Average of the time observations on the mean of the gravity acceleration in the X 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.6800  0.8376  0.9208  0.6975  0.9425  0.9745 	
+	
+tgravityaccmeany 10
+	Average of the time observations on the mean of the gravity acceleration in the Y 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.    1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.47990 -0.23320 -0.12780 -0.01624  0.08773  0.95660
+		tgravityaccmeanz 11
+	Average of the time observations on the mean of the gravity acceleration in the Z 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.     1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.49510 -0.11730  0.02384  0.07412  0.14950  0.95790
+	tgravityaccstdx	12
+	Average of the time observations on the standard deviation of gravity acceleration 	
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9968 -0.9825 -0.9695 -0.9638 -0.9509 -0.8296
+
+		tgravityaccstdy	13
+	Average of the time observations on the standard deviation of gravity acceleration 	
+	in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9942 -0.9711 -0.9590 -0.9524 -0.9370 -0.6436 
+
+		tgravityaccstdz	14
+	Average of the time observations on the standard deviation of gravity acceleration 	
+	in the Z direction               
+		Continuous, normalized and bounded within [-1,1]
+		 Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9910 -0.9605 -0.9450 -0.9365 -0.9180 -0.6102
+	
+	tbodyaccjerkmeanx 15	
+	Average of the time observations on the mean of body acceleration jerk in the X 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+		0.04269 0.07396 0.07640 0.07947 0.08330 0.13020
+
+tbodyaccjerkmeany 16		
+	Average of the time observations on the mean of body acceleration jerk in the Y 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.       1st Qu.     Median       Mean    3rd Qu.       Max. 
+		-0.0386900  0.0004664  0.0094580  0.0075620  0.0134000  0.0568200
+
+tbodyaccjerkmeanz 17
+	Average of the time observations on the mean of body acceleration jerk in the Z 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.      1st Qu.    Median      Mean   3rd Qu.      Max. 
+		-0.067460 -0.010600 -0.003812 -0.004936  0.001958  0.038050 
+
+		tbodyaccjerkstdx 18
+	Average of the time observations on the standard deviation of body acceleration jerk 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9946 -0.9832 -0.8104 -0.5950 -0.2233  0.5443
+
+		tbodyaccjerkstdy 19
+	Average of the time observations on the standard deviation of body acceleration jerk 
+	in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9895 -0.9724 -0.7756 -0.5654 -0.1483  0.3553 
+
+		tbodyaccjerkstdz 20
+	Average of the time observations on the standard deviation of body acceleration jerk 
+	in the z direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.99330 -0.98270 -0.88370 -0.73600 -0.51210  0.03102
+
+		tbodygyromeanx 21	
+	Average of the time observations on the mean of body angular velocity in the X 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.20580 -0.04712 -0.02871 -0.03245 -0.01676  0.19270
+
+	tbodygyromeany 22
+	Average of the time observations on the mean of body angular velocity in the Y 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.20420 -0.08955 -0.07318 -0.07426 -0.06113  0.02747	
+
+	tbodygyromeanz 23
+	Average of the time observations on the mean of body angular velocity in the Z 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.07245  0.07451  0.08512  0.08743  0.10180  0.17910
+
+tbodygyrostdx 24
+	Average of the time observations on the standard deviation of body angular velocity 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9943 -0.9737 -0.7890 -0.6916 -0.4414  0.2677
+
+		tbodygyrostdy 25
+Average of the time observations on the standard deviation of body angular velocity 
+	in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9942 -0.9629 -0.8017 -0.6533 -0.4196  0.4765	
+	tbodygyrostdz 26
+	Average of the time observations on the standard deviation of body angular velocity 
+	in the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9855 -0.9609 -0.8010 -0.6164 -0.3106  0.5649
+
+		tbodygyrojerkmeanx 27	
+	Average of the time observations on the mean of body angular velocity jerk in the X 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.15720 -0.10320 -0.09868 -0.09605 -0.09110 -0.02209
+
+	tbodygyrojerkmeany 28
+	Average of the time observations on the mean of body angular velocity jerk in the Y 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		  Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.07681 -0.04552 -0.04109 -0.04268 -0.03842 -0.01320
+
+		tbodygyrojerkmeanz 29
+	Average of the time observations on the mean of body angular velocity jerk in the Z 	
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		 Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+		-0.092500 -0.061720 -0.053430 -0.054800 -0.048980 -0.006941 
+
+		tbodygyrojerkstdx 30	
+	Average of the time observations on the standard deviation of body angular velocity jerk 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9965 -0.9804 -0.8396 -0.7036 -0.4629  0.1791
+
+tbodygyrojerkstdy 31	
+	Average of the time observations on the standard deviation of body angular velocity jerk 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9971 -0.9833 -0.8942 -0.7636 -0.5861  0.2959 
+	tbodygyrojerkstdz 32
+	Average of the time observations on the standard deviation of body angular velocity jerk 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9954 -0.9848 -0.8610 -0.7096 -0.4741  0.1932 
+tbodyaccmagmean	33
+	Average of the time observations on the mean of body acceleration mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9865 -0.9573 -0.4829 -0.4973 -0.0919  0.6446
+
+		tbodyaccmagstd	34
+	Average of the time observations on the standard deviation of body acceleration mag
+		Continuous, normalized and bounded within [-1,1]
+		Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9865 -0.9430 -0.6074 -0.5439 -0.2090  0.4284
+
+		tgravityaccmagmean 35	
+	Average of the time observations on the mean of gravity acceleration mag 
+		Continuous, normalized and bounded within [-1,1]
+		 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9865 -0.9573 -0.4829 -0.4973 -0.0919  0.6446
+tgravityaccmagstd 36
+	Average of the time observations on the standard deviation of gravity acceleration mag 
+		Continuous, normalized and bounded within [-1,1]
+		 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9865 -0.9430 -0.6074 -0.5439 -0.2090  0.4284
+
+		tbodyaccjerkmagmean 37	
+	Average of the time observations on the mean of body acceleration jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9928 -0.9815 -0.8168 -0.6079 -0.2456  0.4345
+
+	tbodyaccjerkmagstd 38
+	Average of the time observations on the standard deviation of body acceleration jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9946 -0.9767 -0.8014 -0.5842 -0.2173  0.4506
+		
+tbodygyromagmean 39
+	Average of the time observations on the mean of body angular velocity mag 
+		Continuous, normalized and bounded within [-1,1]
+		  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9807 -0.9461 -0.6551 -0.5652 -0.2159  0.4180
+
+		tbodygyromagstd	40	
+	Average of the time observations on the standard deviation of body angular velocity mag 
+		Continuous, normalized and bounded within [-1,1]
+		 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9814 -0.9476 -0.7420 -0.6304 -0.3602  0.3000
+	
+tbodygyrojerkmagmean 41	
+	Average of the time observations on the mean of body angular velocity jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		  Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+		-0.99730 -0.98520 -0.86480 -0.73640 -0.51190  0.08758
+	
+tbodygyrojerkmagstd 42
+	Average of the time observations on the standard deviation of body angular velocity jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+		-0.9977 -0.9805 -0.8809 -0.7550 -0.5767  0.2502
+
+fbodyaccmeanx	43
+	Average of the frequency observations on the mean of body acceleration in the X 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9953 -0.9787 -0.7691 -0.5758 -0.2174  0.5370
+		
+fbodyaccmeany	44
+	Average of the frequency observations on the mean of body acceleration in the Y 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.98900 -0.95360 -0.59500 -0.48870 -0.06341  0.52420
+
+		fbodyaccmeanz	45
+	Average of the frequency observations on the mean of body acceleration in the Z 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.   1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9895 -0.9621 -0.7236 -0.6298 -0.3183  0.2807
+
+		fbodyaccstdx	46	
+	Average of the frequency observations on the standard deviation of body acceleration 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9966 -0.9820 -0.7470 -0.5522 -0.1966  0.6585
+
+	fbodyaccstdy	47
+	Average of the frequency observations on the standard deviation of body acceleration 
+	in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.      1st Qu.  Median    Mean    3rd Qu.    Max. 
+ 		-0.99070 -0.94040 -0.51340 -0.48150 -0.07913  0.56020 
+
+		fbodyaccstdz	48			Average of the frequency observations on the standard deviation of body acceleration 
+	in the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9872 -0.9459 -0.6441 -0.5824 -0.2655  0.6871
+
+fbodyaccmeanfreqx 49	
+	Average of the frequency observations on the weighted mean (by frequencies) of body 
+	acceleration in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.      1st Qu.  Median    Mean    3rd Qu.    Max. 
+ 		-0.63590 -0.39170 -0.25730 -0.23230 -0.06105  0.15910
+	
+fbodyaccmeanfreqy 50
+	Average of the frequency observations on the weighted mean (by frequencies) of body 
+	acceleration in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.       1st Qu.    Median    Mean      3rd Qu.    Max. 
+ 		-0.379500 -0.081310  0.007855  0.011520  0.086280  0.466500
+
+		fbodyaccmeanfreqz 51
+	Average of the frequency observations on the weighted mean (by frequencies) of body 
+	acceleration in the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.52010 -0.03629  0.06582  0.04381  0.17540  0.40250
+
+		fbodyaccjerkmeanx 52
+	Average of the frequency observations on the mean of body acceleration jerk in the X 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9947 -0.9828 -0.8126 -0.6139 -0.2820  0.4743
+
+		fbodyaccjerkmeany 53	
+	Average of the frequency observations on the mean of body acceleration jerk in the Y 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9894 -0.9725 -0.7817 -0.5882 -0.1963  0.2767
+
+	fbodyaccjerkmeanz 54
+	Average of the frequency observations on the mean of body acceleration jerk in the Z 		
+	direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9920 -0.9798 -0.8707 -0.7144 -0.4697  0.1578
+
+		fbodyaccjerkstdx 55	
+	Average of the frequency observations on the standard deviation of body acceleration jerk 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9951 -0.9847 -0.8254 -0.6121 -0.2475  0.4768
+
+	fbodyaccjerkstdy 56		
+	Average of the frequency observations on the standard deviation of body acceleration jerk 
+	in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9905 -0.9740 -0.7852 -0.5707 -0.1685  0.3498
+
+fbodyaccjerkstdz 57
+	Average of the frequency observations on the standard deviation of body acceleration jerk 
+	in the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.       1st Qu.    Median    Mean     3rd Qu.    Max. 
+ 		-0.993100 -0.983700 -0.895100 -0.756500 -0.543800 -0.006236
+
+fbodyaccjerkmeanfreqx 58	
+	Average of the frequency observations on the weighted mean (by frequencies) of body acceleration jerk 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.57600 -0.28970 -0.06091 -0.06917  0.17660  0.32920
+
+	fbodyaccjerkmeanfreqy 59
+	Average of the frequency observations on the weighted mean (by frequencies) of body acceleration jerk 
+	in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.60200 -0.39750 -0.23210 -0.22810 -0.04721  0.19570
+
+		fbodyaccjerkmeanfreqz 60
+	Average of the frequency observations on the weighted mean (by frequencies) of body acceleration jerk 
+	in the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.62760 -0.30870 -0.09187 -0.13760  0.03860  0.23010
+
+		fbodygyromeanx 61
+	Average of the frequency observations on the mean of body angular velocity 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9931 -0.9698 -0.7300 -0.6368 -0.3387  0.4750
+		fbodygyromeany 62	
+	Average of the frequency observations on the mean of body angular velocity 
+	in the Y direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9940 -0.9700 -0.8141 -0.6767 -0.4458  0.3288
+
+	fbodygyromeanz 63
+	Average of the frequency observations on the mean of body angular velocity 
+	in the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9860 -0.9624 -0.7909 -0.6044 -0.2635  0.4924
+
+
+fbodygyrostdx 64
+	Average of the frequency observations on the standard deviation of body angular velocity 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9947 -0.9752 -0.8086 -0.7110 -0.4813  0.1966
+	
+	fbodygyrostdy 65
+	Average of the frequency observations on the standard deviation of body angular velocity 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9944 -0.9602 -0.7964 -0.6455 -0.4154  0.6462
+	
+	fbodygyrostdz 66
+	Average of the frequency observations on the standard deviation of body angular velocity 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9867 -0.9643 -0.8224 -0.6577 -0.3916  0.5225
+
+		fbodygyromeanfreqx 67	
+	Average of the frequency observations on the weighted mean (by frequencies) of body angular velocity 
+	in the X direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.      1st Qu.     Median    Mean      3rd Qu.    Max. 
+ 		-0.395800 -0.213400 -0.115500 -0.104600  0.002655  0.249200
+
+	fbodygyromeanfreqy 68	
+	Average of the frequency observations on the weighted mean (by frequencies) of body angular velocity 
+	in the YX direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.      1st Qu.  Median    Mean    3rd Qu.    Max. 
+ 		-0.66680 -0.29430 -0.15790 -0.16740 -0.04269  0.27310 
+
+	fbodygyromeanfreqz 69
+	Average of the frequency observations on the weighted mean (by frequencies) of body angular velocity 
+	in the Z direction
+		Continuous, normalized and bounded within [-1,1]
+		Min.      1st Qu.  Median    Mean    3rd Qu.    Max. 
+ 		-0.50750 -0.15480 -0.05081 -0.05727  0.04152  0.37710 
+
+		fbodyaccmagmean	70
+	Average of the frequency observations on the mean of body acceleration mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9868 -0.9560 -0.6703 -0.5365 -0.1622  0.5866
+	
+	fbodyaccmagstd	71	
+	Average of the frequency observations on the standard deviation of body acceleration mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9876 -0.9452 -0.6513 -0.6210 -0.3654  0.1787
+
+	fbodyaccmagmeanfreq 72
+	Average of the frequency observations on the weighted mean (by frequencies) of body acceleration mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.31230 -0.01475  0.08132  0.07623  0.17440  0.43580 
+		fbodybodyaccjerkmagmean	73	
+	Average of the frequency observations on the mean of body acceleration jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9940 -0.9770 -0.7940 -0.5756 -0.1872  0.5384
+
+	fbodybodyaccjerkmagstd	74
+	Average of the frequency observations on the standard deviation of body acceleration jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9944 -0.9756 -0.8126 -0.5992 -0.2668  0.3163 
+
+		fbodybodyaccjerkmagmeanfreq 75
+	Average of the frequency observations on the weighted mean (by frequencies) of body acceleration jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.12520  0.04527  0.17200  0.16260  0.27590  0.48810 
+
+		fbodybodygyromagmean 76		
+	Average of the frequency observations on the mean of body angular velocity mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9865 -0.9617 -0.7657 -0.6671 -0.4087  0.2040
+
+fbodybodygyromagstd 77
+	Average of the frequency observations on the standard deviation of body angular velocity mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max.
+		-0.45660 -0.16950 -0.05352 -0.03602  0.08228  0.40950
+
+		fbodybodygyromagmeanfreq 78
+	Average of the frequency observations on the weighted mean (by frequencies) of body angular velocity mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9815 -0.9488 -0.7727 -0.6723 -0.4277  0.2367 
+
+		fbodybodygyrojerkmagmean 79	
+	Average of the frequency observations on the mean of body angular velocity jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.9976 -0.9813 -0.8779 -0.7564 -0.5831  0.1466 
+
+fbodybodygyrojerkmagstd	80	
+	Average of the frequency observations on the standard deviation of body angular velocity jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max.
+		-0.9976 -0.9802 -0.8941 -0.7715 -0.6081  0.2878
+	
+fbodybodygyrojerkmagmeanfreq 81		
+	Average of the frequency observations on the weighted mean (by frequencies) of body angular velocity jerk mag 
+		Continuous, normalized and bounded within [-1,1]
+		Min.    1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 		-0.18290  0.05423  0.11160  0.12600  0.20810  0.42630
+
+
+Note: the names of the measures in this dataset mirror the names of the measures of the source dataset. However, in this dataset the measures are averaged for each subject-activity group. No further description is added to the name of each measure to keep the names of the measures as short as possible, but descriptive enough. 
