@@ -4,12 +4,9 @@ The source data for this dataset was collected by Davide Anguita, Alessandro Ghi
 
 The tidy dataset can be loaded in R with the following script:
 
-fileUrl <- "https://s3.amazonaws.com/coursera-uploads/peer-review/9ecc142db9777f061e1a052256b76c6d/tidydata.txt"
-
-fileUrl <- sub("^https", "http", address)
-
-tidydata <- read.table(url(fileUrl), header = TRUE)
-
+fileUrl <- "https://s3.amazonaws.com/coursera-uploads/peer-review/9ecc142db9777f061e1a052256b76c6d/tidydata.txt"  
+fileUrl <- sub("^https", "http", address)  
+tidydata <- read.table(url(fileUrl), header = TRUE)  
 View(tidydata)
 
 It can also be loaded from a local folder with: 
